@@ -13,7 +13,7 @@ return {
 	},
 	config = function()
 		require("codeium").setup({
-			filetypes = {
+			codeium_filetypes = {
 				markdown = false,
 				text = false,
 				txt = false,
