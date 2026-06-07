@@ -5,7 +5,7 @@
 
 -- Basic Settings
 vim.opt.number = true -- Line numbers
-vim.opt.relativenumber = true -- Relative line numbers
+vim.opt.relativenumber = false -- Absolute line numbers
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.scrolloff = 10 -- Keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 8 -- Keep 8 columns left/right of cursor
@@ -26,7 +26,7 @@ vim.opt.grepformat = "%f:%l:%c:%m" -- filename, line number, column, content
 -- Search Settings
 vim.opt.ignorecase = true -- Case-insensitive search
 vim.opt.smartcase = true -- Case-sensitive if uppercase in search
-vim.opt.hlsearch = false -- Don't highlight search results
+vim.opt.hlsearch = true -- Highlight search results
 vim.opt.incsearch = true -- Show matches as you type
 
 -- Visual Settings
