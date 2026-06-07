@@ -25,17 +25,11 @@ return {
 		lazy = false,
 		priority = 999,
 		config = function()
-			local palette = require("nightfox.palette").load("duskfox")
-
 			require("nightfox").setup({
 				options = {
 					transparent = false,
 				},
-				groups = {
-					duskfox = {
-						Visual = { bg = palette.bg1 },
-					},
-				},
+				groups = {},
 			})
 			vim.cmd("colorscheme duskfox")
 		end,
