@@ -66,11 +66,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.signcolumn = "no"
 	end,
 })
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function(data)
-    if data.file == "" then
-      require("nvim-tree.api").tree.open()
-    end
-  end,
-})
