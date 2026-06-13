@@ -19,6 +19,7 @@ vim.opt.shiftwidth = 2 -- Indent width
 vim.opt.softtabstop = 2 -- Soft tab stop
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart auto-indenting
+vim.opt.smarttab = true
 vim.opt.autoindent = true -- Copy indent from current line
 vim.opt.grepprg = "rg --vimgrep" -- Use ripgrep if available
 vim.opt.grepformat = "%f:%l:%c:%m" -- filename, line number, column, content
