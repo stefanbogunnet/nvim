@@ -50,6 +50,10 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
+vim.keymap.set("n", "<leader>zf", function()
+	vim.lsp.buf.format()
+end, { desc = "Format file" })
+
 vim.keymap.set("n", "<leader>pa", function()
 	local path = vim.fn.expand("%:p")
 	vim.fn.setreg("+", path)
