@@ -19,7 +19,9 @@ return function(capabilities)
 	local eslint_d = require("efmls-configs.linters.eslint_d") -- ts/js/solidity/json/react/svelte/vue linter
 	local fixjson = require("efmls-configs.formatters.fixjson") -- json formatter
 	local shellcheck = require("efmls-configs.linters.shellcheck") -- bash linter
-	local shfmt = require("efmls-configs.formatters.shfmt") -- bash formatter
+	local shfmt = vim.tbl_extend("force", require("efmls-configs.formatters.shfmt"), { -- bash formatter
+		formatCommand = require("efmls-configs.fs").executable("shfmt") .. " -i 2 -filename '${INPUT}' -",
+	})
 	local hadolint = require("efmls-configs.linters.hadolint") -- docker linter
 	local cpplint = require("efmls-configs.linters.cpplint") -- c/cpp linter
 	local clangformat = require("efmls-configs.formatters.clang_format") -- c/cpp formatter

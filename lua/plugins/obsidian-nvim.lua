@@ -1,6 +1,7 @@
 return {
   "https://github.com/obsidian-nvim/obsidian.nvim",
 	lazy = false,
+	dependencies = { "ibhagwan/fzf-lua" },
 	config = function()
 		local function is_arch()
 			local f = io.open("/etc/os-release", "r")
